@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+    <main>
+        <div class="paper"></div>
+        <section id="hero">
+            <!-- I removed auto-rotate from -->
+            <model-viewer
+                src="{{ url_for('static', filename='model.gltf') }}"
+                camera-controls
+                style="width: 2000px; height: 400px;">
+            </model-viewer>
+            <div class="hero-text">
+                <h1>Hello, I'm Tony!</h1>
+                <p>I program :0</p>
+            </div>
+        </section>
+        <section id="projects">
+            <h2>Look at my projects</h2>
+            <div class="flex">
+            </div>
+        </section>
+{% endblock %}

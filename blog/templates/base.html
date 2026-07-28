@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"> -->
+          <title>{% block title %}My Blog{% endblock %}</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Matthew Diggines - Composer</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=IM+Fell+English:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+        <script defer src="{{ url_for('static', filename='script.js') }}"></script>    
+</head>
+    <body>
+        <div class="top-region">
+            <div class="centre">
+                <div class="wrapper">
+                    <div class="border">
+                        <div class="navbar">
+                            <nav>
+                                <ul>
+                                    <li><a>Home</a></li>
+                                    <li><a>About Me</a></li>
+                                    <li><a>Contact</a></li>  
+                                </ul>      
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <div class="galaxy">
+            <div class="sky"></div>
+            <span class="moon"></span>
+        </div>  
+    </div>
+        <!-- <main class="container"> -->
+        {% block content %}{% endblock %}
+        <!-- </main> -->
+    </body>
+    <footer>
+        © 2026 Tony He. All rights reserved.
+    </footer>
+    <svg>
+    <filter id="wavy2">
+        <feTurbulence x="0" y="0" baseFrequency="0.018" numOctaves="5" seed="3" />
+        <feDisplacementMap in="SourceGraphic" scale="20" />
+    </filter>
+    </svg>
+</html>
